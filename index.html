@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        <link rel="canonical" href="https://gabrielhocc.github.io/">
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Calculadora de Notas</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Calculadora de Notas</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#calculadora-de-notas" class="nav-link">Calculadora de Notas</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#requisitos-funcionais" class="nav-link">Requisitos funcionais:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#requisitos-nao-funcionais" class="nav-link">Requisitos não funcionais:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#diagrama-de-casos-de-usos" class="nav-link">Diagrama de casos de usos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#especificacao-de-caso-dos-casos-de-uso" class="nav-link">Especificação de caso dos casos de uso:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prototipacao-da-tela-do-app" class="nav-link">Prototipação da tela do app:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="calculadora-de-notas">Calculadora de Notas</h1>
+<p>Alunos: Gabriel Henrique de Oliveira Campos , Bianca Ferreira Siqueira e Vitória Machado</p>
+<h2 id="requisitos-funcionais">Requisitos funcionais:</h2>
+<p><code>Cálculo da Nota Semestral:</code></p>
+<ul>
+<li>O sistema deve calcular a nota semestral utilizando a fórmula NS = (N1 * 2 + N2 * 3) / 5.</li>
+</ul>
+<p><code>Verificação de Aprovação/Reprovação:</code></p>
+<ul>
+<li>O sistema deve verificar se a nota semestral é igual ou superior a 70 para aprovação e inferior a 35 para reprovação.</li>
+<li>Se a nota estiver entre 35 e 70, o sistema deve direcionar para o exame final.</li>
+</ul>
+<p><code>Cálculo da Nota Final:</code></p>
+<ul>
+<li>O sistema deve calcular a nota final utilizando a fórmula Nota Final = (NS * 3 + EF * 2) / 5, onde EF é a nota do exame final.</li>
+<li>Verificação de Aprovação na Nota Final:</li>
+<li>O sistema deve verificar se a nota final é igual ou superior a 50 para aprovação.</li>
+</ul>
+<p><code>Gerenciamento de Notas:</code></p>
+<ul>
+<li>O sistema deve permitir que os alunos salvem as notas de cada disciplina (N1, N2, Exame Final) conforme são divulgadas.</li>
+<li>Os alunos devem poder visualizar as notas das disciplinas já cadastradas.</li>
+<li>Os alunos devem poder alterar as notas já cadastradas.</li>
+<li>Os alunos devem poder excluir uma disciplina cadastrada.</li>
+</ul>
+<p><code>Cálculo da Nota Mínima Necessária:</code></p>
+<ul>
+<li>O sistema deve calcular a nota mínima necessária para aprovação em diferentes situações:</li>
+<li>Após a divulgação das notas do 1º bimestre.</li>
+<li>Após a divulgação das notas do 1º e 2º bimestres.</li>
+<li>Após a divulgação das notas finais para os alunos que ficaram de exame final.</li>
+</ul>
+<h2 id="requisitos-nao-funcionais">Requisitos não funcionais:</h2>
+<p><code>Usabilidade:</code></p>
+<ul>
+<li>O aplicativo deve ser fácil de usar e intuitivo para os alunos.</li>
+<li>Deve ter uma interface amigável e de fácil navegação.</li>
+</ul>
+<p><code>Segurança:</code></p>
+<ul>
+<li>As informações das notas dos alunos devem ser armazenadas de forma segura e protegidas contra acessos não autorizados.</li>
+</ul>
+<p><code>Desempenho:</code></p>
+<ul>
+<li>O sistema deve ter um desempenho rápido e eficiente no cálculo das notas e na exibição das informações.</li>
+</ul>
+<p><code>Disponibilidade:</code></p>
+<ul>
+<li>O aplicativo deve estar disponível para acesso dos alunos sempre que necessário, sem interrupções significativas de serviço.</li>
+</ul>
+<p><code>Compatibilidade:</code></p>
+<ul>
+<li>O aplicativo deve ser compatível com diferentes dispositivos, como computadores, tablets e smartphones, para facilitar o acesso dos alunos.</li>
+</ul>
+<p><code>Manutenção:</code></p>
+<ul>
+<li>Deve ser fácil realizar atualizações e manutenções no sistema para garantir seu bom funcionamento ao longo do tempo.</li>
+</ul>
+<h2 id="diagrama-de-casos-de-usos">Diagrama de casos de usos</h2>
+<ul>
+<li>A seguir temos a apresewntação do caso de uso da nossa aplicação: </li>
+<li><a href="https://lucid.app/lucidchart/740841c3-a1f7-41a5-ae29-69185dfd37a4/edit?invitationId=inv_6282b383-45e1-4c4f-a03b-204d4561398c&amp;page=0_0#">Link para visualização no LucidChart</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Caso de Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Caso de Uso" src="imagens/Caso_de_uso.png" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="especificacao-de-caso-dos-casos-de-uso">Especificação de caso dos casos de uso:</h2>
+<p><code>Salvar Notas:</code></p>
+<ul>
+<li>Descrição: Permite ao aluno salvar as notas de cada disciplina (N1, N2, Exame Final) assim que são divulgadas.</li>
+<li>Atores: Aluno</li>
+</ul>
+<p><code>Fluxo Principal:</code></p>
+<ul>
+<li>O aluno acessa a função de salvar notas.</li>
+<li>O sistema solicita as notas de N1, N2 e Exame Final.</li>
+<li>O aluno insere as notas e confirma o salvamento.</li>
+<li>O sistema armazena as notas no banco de dados.</li>
+</ul>
+<p><code>Visualizar Notas:</code></p>
+<ul>
+<li>Descrição: Permite ao aluno visualizar as notas das disciplinas já cadastradas.</li>
+<li>Atores: Aluno</li>
+</ul>
+<p><code>Fluxo Principal:</code></p>
+<ul>
+<li>O aluno acessa a função de visualizar notas.</li>
+<li>O sistema exibe as notas de N1, N2 e Exame Final para cada disciplina cadastrada.</li>
+</ul>
+<p><code>Calcular Notas:</code></p>
+<ul>
+<li>Descrição: Permite ao aluno calcular a nota mínima necessária para aprovação em diferentes situações.</li>
+<li>Atores: Aluno</li>
+</ul>
+<p><code>Fluxo Principal:</code></p>
+<ul>
+<li>O aluno acessa a função de calcular notas.</li>
+<li>O sistema solicita informações relevantes para o cálculo (notas atuais, situação específica).</li>
+<li>O aluno fornece as informações necessárias.</li>
+<li>O sistema realiza o cálculo e exibe a nota mínima necessária para aprovação.</li>
+</ul>
+<p><code>Visualizar agenda:</code></p>
+<ul>
+<li>Descrição: Permite ao aluno visualizar sua agenda de provas.</li>
+<li>Atores: Aluno</li>
+</ul>
+<p><code>Fluxo Principal:</code></p>
+<ul>
+<li>O aluno acessa a função agenda.</li>
+<li>O sistema mostra sua agenda de provas do semestre.</li>
+</ul>
+<h2 id="prototipacao-da-tela-do-app">Prototipação da tela do app:</h2>
+<ul>
+<li>A seguir podemos observar algumas telas criadas para representar nosso app, porém a visualização completa pode ser feita no link abaixo:</li>
+<li><a href="https://www.figma.com/file/PvOHqWEnZS1YCI6NsjqBgf/Trabalho-Luiz?type=design&amp;node-id=0%3A1&amp;mode=design&amp;t=6IOMLsuhZB1JhUZa-1">Link para visualização completa da protipação no figma</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Tela App</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Tela App" src="imagens/Figma_01.png" /></td>
+</tr>
+<tr>
+<td><img alt="Tela App" src="imagens/Figma_02.png" /></td>
+</tr>
+<tr>
+<td><img alt="Tela App" src="imagens/Figma_03.png" /></td>
+</tr>
+<tr>
+<td><img alt="Tela App" src="imagens/Figma_04.png" /></td>
+</tr>
+<tr>
+<td><img alt="Tela App" src="imagens/Figma_05.png" /></td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.6.0
+Build Date UTC : 2024-04-25 20:31:50.029777+00:00
+-->
